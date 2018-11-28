@@ -35,7 +35,7 @@ int countWords(const char* str)
 			res++;
 		}
 	}
-	return res;
+	return res + count;
 }
 
 void longestInCaptital(char* str)
@@ -77,7 +77,7 @@ void revertWords(char* str)
 			start = str;
 			rev = 0;
 		}
-		if(!rev && !isLetter(*str))
+		if((!rev && !isLetter(*str)) || (!rev && *(str+1) == '\0'))
 		{
 			end = str - 1;
 			rev = 1;
