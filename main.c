@@ -55,8 +55,8 @@ void performChoice(int option, char *str) {
 		break;
 
 	case CHECK_ERASE_CHARS:
-		//eraseCharsFromString(str, ":, ?!-;");
-		eraseCharsFromString(str,"E'!");
+		eraseCharsFromString(str, ":, ?!-;");
+		//eraseCharsFromString(str,"E'!");
 		printf("String after erase %s\n", str);
 		break;
 

@@ -92,11 +92,12 @@ void revertWords(char* str)
 void eraseCharsFromString(char* str,const char* symbols)
 {
 	int i;
-	for(i = 0;*str != '\0';str++)
+	for(i = 0;*(str+i) != '\0';str++)
 	{
-		if(strchr(symbols,*(str + i)) != NULL) i++;
+		while(strchr(symbols,*(str+i)) != NULL)i++;
 		*str = *(str+i);
 	}
+	*str = '\0';
 }
 
 int isPalindrome(const char* str)
