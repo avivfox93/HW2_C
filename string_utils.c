@@ -91,11 +91,11 @@ void revertWords(char* str)
 
 void eraseCharsFromString(char* str,const char* symbols)
 {
-	int i;
-	for(i = 0;*(str+i) != '\0';str++)
+	char* ch;
+	for(ch = str ; *ch != '\0' ; str++,ch++)
 	{
-		while(strchr(symbols,*(str+i)) != NULL)i++;
-		*str = *(str+i);
+		while(strchr(symbols,*ch) != NULL && *ch != '\0')ch++;
+			*str = *ch;
 	}
 	*str = '\0';
 }
