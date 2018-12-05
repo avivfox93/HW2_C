@@ -79,7 +79,10 @@ void revertWords(char* str)
 		}
 		if((!rev && !isLetter(*str)) || (!rev && *(str+1) == '\0'))
 		{
-			end = str - 1;
+			if(!rev && !isLetter(*str))
+				end = str - 1;
+			else
+				end = str;
 			rev = 1;
 			while(start < end)
 				swap(start++,end--);

@@ -8,7 +8,7 @@
 #ifndef STRING_UTILS_H_
 #define STRING_UTILS_H_
 
-#define SPECIAL_LETTERS ":,?-"
+#define SPECIAL_LETTERS ":,?- "
 
 void initString(char*,int);
 void printString(const char*);
